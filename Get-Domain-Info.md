@@ -3,13 +3,13 @@
 To obtain a list of registered domains, you can use the following command in the SCP command-line interface:
 
 ```Bash
-scpc dns list-dns-domain-v2
+scloud dns list-dns-domain-v2
 ```
 
 This command allows you to retrieve a comprehensive list of domains that have been registered through the SCP DNS service. The output will include details such as domain names, registration dates, expiration dates, and other relevant information.
 
 ```Bash
-ubuntu@T3SCP:~$ scpc dns list-dns-domain-v2 | jq
+ubuntu@SCP:~$ scloud dns list-dns-domain-v2 | jq
 {
   "totalCount": 1,
   "contents": [
@@ -34,13 +34,13 @@ To obtain detailed information about a specific registered domain, you can use t
 ***Replace `<DNS_DOMAIN_SERVICE-XXXXXXXXXXXX>` with the actual ID of the domain you want to retrieve information for***
 
 ```Bash
-scpc dns detail-dns-domain-v2 --dns-domain-id <DNS_DOMAIN_SERVICE-XXXXXXXXXXXX>
+scloud dns detail-dns-domain-v2 --dns-domain-id <DNS_DOMAIN_SERVICE-XXXXXXXXXXXX>
 ```
 
 This command will provide you with more in-depth details about the specified registered domain, including administrative contact information, domain renewal, and other relevant data
 
 ```Bash
-ubuntu@Matia-Odyssey:~$ scpc dns detail-dns-domain-v2 --dns-domain-id DNS_DOMAIN_SERVICE-XXXXXXXXXXXX | jq
+ubuntu@Matia-Odyssey:~$ scloud dns detail-dns-domain-v2 --dns-domain-id DNS_DOMAIN_SERVICE-XXXXXXXXXXXX | jq
 {
   "projectId": "PROJECT-XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX",
   "createdBy": "XXXXXXXX",
